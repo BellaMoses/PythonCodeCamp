@@ -1,0 +1,44 @@
+class Cat:
+	def __init__(self,size,color,shape,weight):
+		#attributes
+		self.size=size
+		self.color=color
+		self.shape=shape
+		self.weight=weight
+		self.pos_x=0
+		self.pos_y=0
+	def change_size(self,new_size):
+		self.size=new_size
+		return(self.size)
+	def change_color(self,new_color):
+		self.color=new_color
+		return(self.color)
+	def change_shape(self,new_shape):
+		self.shape=new_shape
+		return(self.shape)
+	def change_weight(self,new_weight):
+		self.weight=new_weight
+		return(self.weight)
+	def get_size(self):
+		return(self.size)
+	def get_color(self):
+		return(self.color)
+	def get_shape(self):
+		return(self.shape)
+	def get_weight(self):
+		return(self.weight)
+	def drop(self,height):
+		self.pos_y=height
+		print("You have dropped your cat from {} feet.".format(self.pos_y))
+		if height >20:
+			print("*Splat* It died the second it hit the ground.".format(self.pos_y))
+		elif height >1:
+			print("It landed on its paws.".format(self.pos_y))
+		elif height <1:
+			print("It landed on its back. It's mad at you.".format(self.pos_y))
+		elif height==0:
+			print("You didn't drop your cat.")
+your_cat=Cat("small, ","black, ","fluffy, ","light")
+your_cat.drop(15)
+your_cat.drop(30)
+your_cat.drop(.5)
