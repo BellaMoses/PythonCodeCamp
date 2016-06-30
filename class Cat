@@ -31,14 +31,13 @@ class Cat:
 		self.pos_y=height
 		print("You have dropped your cat from {} feet.".format(self.pos_y))
 		if height >20:
-			print("*Splat* It died the second it hit the ground.".format(self.pos_y))
+			print("*Splat* It died the second it hit the ground. You're sad now. And a murderer.".format(self.pos_y))
+		elif height==0:
+			print("It didn't go anywhere.")
+		elif height <1.1:
+			print("It landed on its back. It's mad at you.".format(self.pos_y))
 		elif height >1:
 			print("It landed on its paws.".format(self.pos_y))
-		elif height <1:
-			print("It landed on its back. It's mad at you.".format(self.pos_y))
-		elif height==0:
-			print("You didn't drop your cat.")
+		
 your_cat=Cat("small, ","black, ","fluffy, ","light")
-your_cat.drop(15)
-your_cat.drop(30)
-your_cat.drop(.5)
+your_cat.drop(0)
